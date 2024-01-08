@@ -24,8 +24,8 @@ require_once "exercise_1_classes.php";
 class Beer extends Beverage
 {
 
-    protected $name;
-    protected $alcoholPercentage;
+    private $name;
+    private $alcoholPercentage;
 
     public function __construct(string $color, float $price, string $name, float $alcoholPercentage)
     {
@@ -52,7 +52,7 @@ class Beer extends Beverage
 
     public function beerInfo()
     {
-        echo "Hi i'm $this->name and have an alcochol percentage of $this->alcoholPercentage
+        echo "Hi I'm $this->name and have an alcochol percentage of $this->alcoholPercentage
          and I have a $this->color color.";
     }
 }
