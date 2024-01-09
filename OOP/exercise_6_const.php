@@ -16,3 +16,36 @@ TODO: Make sure that every print is on a new line.
 
 Use typehinting everywhere!
 */
+
+require_once "exercise_1_classes.php";
+
+const barname = 'Het Vervolg';
+echo $barname;
+
+class Beer extends Beverage
+{
+
+    private $name;
+    private $alcoholPercentage;
+
+    public function __construct(string $color, float $price, string $name, float $alcoholPercentage)
+    {
+        parent::__construct($color, $price);
+
+        $this->name = $name;
+        $this->alcoholPercentage = $alcoholPercentage;
+    }
+
+    public function getAlcoholPercentage()
+    {
+        echo "Alcoholpercentage: $this->alcoholPercentage% </br>";
+    }
+
+    public function getBarname()
+    {
+        echo barname;
+    }
+}
+
+$Duvel = new Beer("blond", 3.5, "Duvel", 8.5);
+$Duvel->getBarname();
